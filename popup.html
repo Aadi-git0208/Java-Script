@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popup Functions</title>
+</head>
+<body>
+  <button onclick="start()">Start Interaction</button>
+
+  <script>
+    function start() {
+      alert("Welcome to the site!");
+      
+      const name = prompt("What is your name?");
+      if (name === null) return; // Cancelled
+
+      const confirmEntry = confirm("Are you sure your name is " + name + "?");
+      if (confirmEntry) {
+        alert("Great! Hello, " + name + "!");
+      } else {
+        alert("Please refresh and try again.");
+      }
+    }
+  </script>
+</body>
+</html>

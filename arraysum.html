@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum And Product of an Array</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4];
+        let sum =0;
+        let mul=1;
+        for(let i=0;i<arr.length;i++){
+            sum = sum+arr[i];
+            mul = mul*arr[i];
+
+        }
+        document.write("The sum of the array:" +sum + "<br>");
+        document.write("The product of the array:" +mul+ "<br>");
+
+        let nums=[10,20,30,40,50,60];
+        let t=50;
+        let a,b;
+        for(let i=0;i<nums.length;i++){
+            for(let j=i;j<nums.length;j++){
+                if(nums[i]+nums[j]==t){
+                    a=i;
+                    b=j;
+                    break;
+                }
+            }
+        }
+        a++;
+        b++;
+        document.write("The indices of the two elements summing upto:"+t+"is"+a+","+b);  
+
+
+
+    </script>
+    
+</body>
+</html>

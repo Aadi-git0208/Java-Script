@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+    <h2>Welcome Page</h2>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="saveName()">Save Name</button>
+
+    <p id="greeting"></p>
+
+    <script>
+        function saveName(){
+            let name = document.getElementById("username").value;
+            if( name == ""){
+                alert("Please enter your name!");
+                return;
+            }
+
+            sessionStorage.setItem("username",name);
+            document.getElementById("greeting").textContent="Hello, "+ name;
+        }
+        window.onload=function(){
+            let savedName=sessionStorage.getItem("username");
+            if(saveName){
+                document.getElementById("greeting").textContent="Hello, "+ savedName;
+
+            }
+        };
+    </script>
+    
+</body>
+</html>
